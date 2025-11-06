@@ -1,0 +1,74 @@
+===============================================================
+Evaluation Function Explanation - Red-Blue Nim
+===============================================================
+
+Function Name:
+    eval_fn(state, player)
+
+---------------------------------------------------------------
+Purpose:
+---------------------------------------------------------------
+The evaluation function provides a heuristic estimate of
+how favorable a non-terminal state is for the given player.
+It is used when the search depth limit is reached in the
+Depth-Limited Alpha-Beta version of Minimax.
+
+---------------------------------------------------------------
+Logic:
+---------------------------------------------------------------
+Each game state is represented as a tuple (red, blue, to_move).
+
+    red      = number of red marbles
+    blue     = number of blue marbles
+    to_move  = the player whose turn it is
+
+The weighted score of the board is computed as:
+
+    value = (2 * red) + (3 * blue)
+
+Rationale:
+    - Red marbles are worth 2 points each.
+    - Blue marbles are worth 3 points each.
+    - A higher total value indicates more marbles remain,
+      which is less desirable for the player whose turn it is
+      (since they are closer to losing in the standard game).
+
+Thus:
+
+    If to_move == player:
+        heuristic = -value
+    else:
+        heuristic = +value
+
+---------------------------------------------------------------
+Interpretation:
+---------------------------------------------------------------
+- Positive heuristic → favorable for the given player.
+- Negative heuristic → unfavorable for the given player.
+- The function approximates the true utility when the search
+  cannot continue to terminal depth.
+
+---------------------------------------------------------------
+Example:
+---------------------------------------------------------------
+State: (red=3, blue=2, to_move='human')
+Player: 'computer'
+
+    value = 2*3 + 3*2 = 12
+    Since to_move != player → heuristic = +12
+
+Meaning:
+    This is a favorable position for the computer,
+    because the human must play next with fewer safe options.
+
+---------------------------------------------------------------
+Summary:
+---------------------------------------------------------------
+This evaluation function reflects the game's scoring system and
+strategically favors states where the opponent faces higher
+remaining marble counts.
+
+It provides a simple, consistent heuristic for depth-limited
+Minimax search to evaluate non-terminal states effectively.
+
+===============================================================
