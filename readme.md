@@ -3,55 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Red–Blue Nim Game – AI Assignment (UTA CSE 4308/5360)</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.7;
-      color: #222;
-      background-color: #fafafa;
-      margin: 40px;
-    }
-    h1, h2, h3 {
-      color: #004aad;
-    }
-    code, pre {
-      background-color: #f3f3f3;
-      border-radius: 6px;
-      padding: 6px 8px;
-      font-family: "Courier New", monospace;
-    }
-    pre {
-      padding: 12px;
-      overflow-x: auto;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 10px;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px 12px;
-      text-align: left;
-    }
-    th {
-      background-color: #e8f0ff;
-    }
-    hr {
-      border: none;
-      border-top: 2px solid #004aad;
-      margin: 40px 0;
-    }
-    ul {
-      list-style-type: square;
-    }
-    .center {
-      text-align: center;
-    }
-  </style>
-</head>
-
+  
 <body>
   <h1> Red–Blue Nim Game – AI Assignment (UTA CSE 4308/5360)</h1>
 
